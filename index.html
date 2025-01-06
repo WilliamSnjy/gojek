@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect ke Gojek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #008f39;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #00692c;
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W89E7582X6"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W89E7582X6');
+        </script>
+</head>
+<body>
+    <h1>Redirect ke Gojek</h1>
+    <p>Klik tombol di bawah ini untuk membuka Gojek.</p>
+
+    <a href="#" onclick="bukaGojek()" class="button">Buka Gojek</a>
+    <script>
+        function bukaGojek() {
+            // Buka aplikasi Gojek
+            window.location.href = "gojek://home";
+    
+            // Tunggu beberapa detik, lalu fallback ke situs web jika aplikasi tidak terbuka
+            setTimeout(function() {
+                window.location.href = "https://www.gojek.com";
+            }, 2000); // Waktu tunggu 2 detik
+        }
+    </script>
+</body>
+</html>
